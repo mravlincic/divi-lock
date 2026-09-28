@@ -1,0 +1,23 @@
+[workspace]
+members = ["programs/divi-lock"]
+
+[toolchain]
+anchor_version = "1.2.0"
+solana_version = "4.2.2"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.localnet]
+divi_lock = "48s9SoST2ZA5AoW6ytBggQiExFFB16f1TJiWVauLUCbB"
+
+[programs.mainnet]
+divi_lock = "48s9SoST2ZA5AoW6ytBggQiExFFB16f1TJiWVauLUCbB"
+
+[provider]
+cluster = "localnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "cargo build-sbf --manifest-path programs/test-hook/Cargo.toml && cargo build-sbf --manifest-path programs/divi-lock/Cargo.toml && cargo test --manifest-path programs/divi-lock/Cargo.toml"

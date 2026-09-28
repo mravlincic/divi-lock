@@ -1,0 +1,11 @@
+.anchor
+.DS_Store
+target
+node_modules
+test-ledger
+/*.json
+*.key
+*.txt
+private/
+scripts/
+idl/
